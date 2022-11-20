@@ -45,7 +45,10 @@ const todoList = () => {
       outputString += list[i].title + " ";
 
       outputString =
-        outputString + ("dueDate" in list[i] ? list[i].dueDate : "") + "\n";
+        outputString + ("dueDate" in list[i] ? list[i].dueDate : "");
+      if (i != list.length - 1) {
+        outputString += "\n";
+      }
     }
 
     return outputString;
